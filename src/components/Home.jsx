@@ -6,11 +6,12 @@ const Home = () => {
       <section>
         <div className="home-text">
           <h2>
-            We are a growth & transformation <br/> consulting firm.
+            6PAC MIND
           </h2>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsa amet iure mollitia aliquid quam nostrum laboriosam sint! Error, sit!
-          </p>
+          <h4>
+          A whole mind fitness site dedicated to building and strengthening the core of your inner man
+          </h4>
+          <br />
           <div className="center">
               <button className="button">
                 get started
