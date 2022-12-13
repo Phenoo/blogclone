@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
 
 import ScrollUp from "./components/ScrollUp";
+import Subscribe from "./components/Subscribe";
 import Blogs from "./pages/Blogs";
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route path='/contact' element={<Contact /> } />
       </Routes>
       <ScrollUp />
+      <Subscribe />
       <Footer />
     </>
   );

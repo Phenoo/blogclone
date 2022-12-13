@@ -255,10 +255,33 @@ nav {
     }
 }
 
+.subscribe {
+    background: $wine;
+    padding: 2rem 0;
+    h4,
+    p {
+        color: #fff;
+    }
+    input {
+        background: #fff;
+        padding: 1rem;
+        width: 100%;
+    }
+    button {
+        background: #111;
+        color: $wine;
+    }
+    img {
+        height: 300px;
+    }
+    .grid {
+        margin: 0;
+    }
+}
+
 footer {
     color: #fff;
     background: #010000;
-    margin-top: 3rem;
     padding: 2rem 0 0;
 }
 
