@@ -174,6 +174,16 @@ nav {
     }
 }
 
+.fourgrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+    ul {
+        flex-direction: column;
+    }
+}
+
 .main-home {
     background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../assets/item1.jpeg);
     background-position: 50%;
@@ -296,28 +306,29 @@ footer {
     position: fixed;
 }
 
-// .scrollup {
-//     width: 2.75rem;
-//     height: 2.75rem;
-//     right: 1rem;
-//     bottom: 1.5rem;
-//     background-color: $gold;
-//     color: $wine;
-//     border: 1px solid $wine;
-//     display: flex;
-//     align-items: center;
-//     cursor: pointer;
-//     justify-content: center;
-//     border-radius: 50%;
-//     transition: all 0.2s ease;
-//     z-index: 100;
-//     &:hover {
-//         transform: scale(1.1);
-//     }
-//     &:active {
-//         transform: scale(0.8);
-//     }
-// }
+.scrollup {
+    width: 2.75rem;
+    height: 2.75rem;
+    right: 1rem;
+    bottom: 1.5rem;
+    background-color: #111;
+    color: $wine;
+    border: 1px solid #111;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    z-index: 100;
+    &:hover {
+        transform: scale(1.1);
+    }
+    &:active {
+        transform: scale(0.8);
+    }
+}
+
 //about-page
 .about-home {
     background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(../assets/ABOUTPAGE.png);
@@ -413,10 +424,22 @@ footer {
     .trigrid {
         grid-template-columns: repeat(2, 1fr);
     }
+    .fourgrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media screen and (max-width: 550px) {
     .trigrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .fourgrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .fourgrid {
         grid-template-columns: repeat(1, 1fr);
     }
 }

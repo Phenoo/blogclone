@@ -55,7 +55,7 @@ const Article = () => {
         <div className="center">
           <br />
           <button className="button">
-            <Link to={`/blog`}>
+            <Link to={`/blogs`}>
               see more
             </Link>
           </button>
