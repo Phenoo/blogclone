@@ -157,6 +157,10 @@ nav {
     text-transform: capitalize;
 }
 
+.mobile {
+    display: none;
+}
+
 .button-container {
     justify-content: center;
     flex-wrap: wrap;
@@ -184,6 +188,15 @@ nav {
     }
 }
 
+.home-text {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-weight: 500;
+    }
+}
+
 .main-home {
     background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../assets/item1.jpeg);
     background-position: 50%;
@@ -206,7 +219,8 @@ nav {
 }
 
 //blog
-.article-section {
+.article-section,
+.blog-container {
     margin: 2rem 0;
     padding: 2rem 0;
 }
@@ -417,9 +431,64 @@ footer {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     section {
         width: 90%;
+    }
+    nav {
+        .menulist {
+            display: none;
+        }
+        .show {
+            background-color: #fff;
+            flex-direction: column;
+            gap: 1rem;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 100vw;
+            display: flex;
+            transform: translateY(0%);
+            z-index: 10;
+            touch-action: none;
+            transition: all 0.3s ease;
+            .menu-btn {
+                position: relative;
+                left: 80%;
+                top: 0;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                padding: 6rem 3rem 1rem;
+                gap: 2rem;
+                a {
+                    margin-bottom: 1rem;
+                    font-size: 1.35rem;
+                    color: #111;
+                }
+            }
+        }
+        .button {
+            text-align: center;
+            margin: 1rem auto;
+            width: 105px;
+        }
+    }
+    .none {
+        display: none;
+    }
+    .mobile {
+        display: flex;
+        z-index: 100;
+        svg {
+            font-size: 1.3rem;
+        }
+    }
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
     }
     .trigrid {
         grid-template-columns: repeat(2, 1fr);

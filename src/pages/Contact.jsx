@@ -2,6 +2,7 @@ import React from 'react'
 
 
 import Helmet from 'react-helmet'
+import ContactHome from '../components/ContactHome'
 import FormComponents from '../components/FormComponents'
 
 
@@ -13,6 +14,7 @@ const Contact = () => {
           6thpacmind
         </title>
       </Helmet>
+      <ContactHome />
     <section>
       <FormComponents />
     </section>

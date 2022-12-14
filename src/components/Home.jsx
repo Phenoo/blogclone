@@ -9,7 +9,7 @@ const Home = () => {
             6PAC MIND
           </h2>
           <h4>
-          A whole mind fitness site dedicated to building and strengthening the core of your inner man
+            building renewed minds
           </h4>
           <br />
           <div className="center">
