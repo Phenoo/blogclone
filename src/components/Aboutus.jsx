@@ -1,16 +1,15 @@
 import React from 'react'
-import Img1 from '../assets/item3.jpeg'
+import { Link } from 'react-router-dom'
+import Img1 from '../assets/author.jpeg'
 
 
 const Aboutus = () => {
   return (
     <div className="aboutus">
       <section>
-      <div className="center">
         <h4 className="headline">
           about the author
         </h4>
-      </div>
         <div className='grid'>
           <div>
             <img src={Img1} alt='about' />
@@ -36,7 +35,9 @@ const Aboutus = () => {
             </p>
             <br />
             <button className="button">
-              learn more
+              <Link to='/about'>
+                read more
+              </Link>
             </button>
           </div>
         </div>

@@ -13,6 +13,7 @@ import Trainings from "./pages/Trainings";
 import Podcast from "./pages/Podcast";
 import Well from "./pages/Well";
 import HIIP from "./pages/HIIP";
+import Single from "./pages/Single";
 
 
 
@@ -31,6 +32,7 @@ function App() {
         <Route path='/training' element={<Trainings /> } />
         <Route path='/blogs' element={<Blogs /> } />
         <Route path='/contact' element={<Contact /> } />
+        <Route path='/blog/:slug' element={<Single /> } />
       </Routes>
       <ScrollUp />
       <Subscribe />

@@ -8,16 +8,8 @@ const Ghome = ({title}) => {
         <h1>
           {title}
         </h1>
-        <h2>
-          building renewed minds
-        </h2>
         <p>
         </p>
-        <div className="center">
-          <button className="button">
-            get started
-          </button>
-        </div>
       </div>
     </section>
   </div>

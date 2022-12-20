@@ -1,65 +1,67 @@
-import {defineField, defineType} from 'sanity'
+export default {
+    name: 'post',
+    title: 'Post',
+    type: 'document',
+    fields: [{
+            name: 'image',
+            title: 'Image',
+            type: 'image',
+            options: {
+                hotspot: true,
+            }
+        },
+        {
+            name: 'name',
+            title: 'Name',
+            type: 'string',
+        },
 
-export default defineType({
-  name: 'post',
-  title: 'Post',
-  type: 'document',
-  fields: [
-    defineField({
-      name: 'title',
-      title: 'Title',
-      type: 'string',
-    }),
-    defineField({
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      options: {
-        source: 'title',
-        maxLength: 96,
-      },
-    }),
-    defineField({
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: {type: 'author'},
-    }),
-    defineField({
-      name: 'mainImage',
-      title: 'Main image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    }),
-    defineField({
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
-    }),
-    defineField({
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime',
-    }),
-    defineField({
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent',
-    }),
-  ],
-
-  preview: {
-    select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
-    },
-    prepare(selection) {
-      const {author} = selection
-      return {...selection, subtitle: author && `by ${author}`}
-    },
-  },
-})
+        {
+            name: 'date',
+            title: 'Date',
+            type: 'datetime',
+        },
+        {
+            name: 'size',
+            title: 'Size',
+            type: 'string',
+        },
+        {
+            name: 'slug',
+            title: 'Slug',
+            type: 'slug',
+            options: {
+                source: 'name',
+                maxLength: 90,
+            }
+        },
+        {
+            name: 'mainimage',
+            title: 'MainImage',
+            type: 'array',
+            of: [{ type: 'image' }],
+            options: {
+                hotspot: true,
+            }
+        },
+        {
+            name: 'material',
+            title: 'Material',
+            type: 'array',
+            of: [{ type: 'string' }],
+            options: {
+                hotspot: true,
+            }
+        },
+        {
+            name: 'description',
+            title: 'Description',
+            type: 'text',
+        },
+        {
+            name: 'category',
+            title: 'Category',
+            type: 'string',
+        },
+    ]
+}

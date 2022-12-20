@@ -1,22 +1,42 @@
 import React from 'react'
 import Img1 from '../assets/item1.jpeg'
+import { Link } from 'react-router-dom';
 
-const BlogCard = ({item}) => {
+import Moment from 'moment'
+import moment from 'moment';
+
+const BlogCard = ({post}) => {
+  
+  const scrollTo = () => {
+    let element = document.getElementById('nav');
+
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest'
+    })
+  }
+  const formatDate = Moment(post.date).format("MMM Do, YYYY.")
+  const minsAgo = moment(post.date).local().startOf('seconds').fromNow();
   return (
     <article className="blog-card">
       <div className="image">
-        <img src={Img1} alt="blog-card" />
+        <Link to={`/blog/${post.slug.current}`} onClick={() => scrollTo()}>
+          <img src={Img1} alt="blog-card" />
+        </Link>
       </div>
       <div className="text">
         <h6>
-          15th November, 2022
+          {formatDate}
         </h6>
         <h4>
-          Strategy and growth solutions for business
+          {post.title}
         </h4>
-        <p>
-          5 minutes read
-        </p>
+        <div className="category">
+          <h5>
+            {minsAgo}
+          </h5>
+        </div>
       </div>
     </article>
   )

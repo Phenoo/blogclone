@@ -1,11 +1,8 @@
 import React, { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import {  NavLink } from 'react-router-dom'
 import { FaBars, FaTimes } from 'react-icons/fa'
 
-import Dropdown from './DropDown'
 import Logo from './Logo'
-
-import {BsChevronDown} from 'react-icons/bs'
 
 const Navigation = () => {
   const [navbar, setNavbar] = useState(false)
@@ -31,23 +28,33 @@ const Navigation = () => {
                     about us
                   </NavLink>
                 </li>
-                <li>
-                  <Dropdown
-                    trigger={<button className='flex'>
-                      <span className='span'>
-                        Blogs
-                      </span>
-                      <span>
-                        <BsChevronDown />
-                      </span>
-                    </button>}
-                    menu={[
-                      <Link to='well'>the well</Link>,
-                      <Link to='podcast'> podcast</Link>,
-                      <Link to='hiip'>hiip </Link>,
-                      <Link to='training'>training</Link>
-                    ]}
-                  />
+                <li  onClick={() => setNavbar(!navbar)}>
+                  <NavLink to='/well'
+                    className={({isActive}) => (isActive ? 'active' : '') }
+                  >
+                    well
+                  </NavLink>
+                </li>
+                <li  onClick={() => setNavbar(!navbar)}>
+                  <NavLink to='/podcast'
+                    className={({isActive}) => (isActive ? 'active' : '') }
+                  >
+                    podcast
+                  </NavLink>
+                </li>
+                <li  onClick={() => setNavbar(!navbar)}>
+                  <NavLink to='/hiip'
+                    className={({isActive}) => (isActive ? 'active' : '') }
+                  >
+                    hiip 
+                  </NavLink>
+                </li>
+                <li  onClick={() => setNavbar(!navbar)}>
+                  <NavLink to='/training'
+                    className={({isActive}) => (isActive ? 'active' : '') }
+                  >
+                    training
+                  </NavLink>
                 </li>
                 <li  onClick={() => setNavbar(!navbar)}>
                   <NavLink to='/contact'

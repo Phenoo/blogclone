@@ -12,11 +12,6 @@ const Home = () => {
             building renewed minds
           </h4>
           <br />
-          <div className="center">
-              <button className="button">
-                get started
-              </button>
-          </div>
         </div>
       </section>
     </div>

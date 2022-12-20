@@ -1,63 +1,41 @@
-import React from 'react'
+import React, {useEffect, useState,} from 'react'
 import BlogCard from './BlogCard'
+import {client} from '../lib/client'
 
 const BlogContainer = () => {
-  const data = [{
-    id: 1,
-    name: 'trainings',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam magni sunt tempora et, eos id minima quasi suscipit doloremque cupiditate'
-  },
-  {
-    id: 2,
-    name: 'courses',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam magni sunt tempora et, eos id minima quasi suscipit doloremque cupiditate'
-  },{
-    id:3,
-    name: 'coaching',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam magni sunt tempora et, eos id minima quasi suscipit doloremque cupiditate'
-  },
-  {
-    id: 4,
-    name: 'trainings',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam magni sunt tempora et, eos id minima quasi suscipit doloremque cupiditate'
-  },
-  {
-    id: 5,
-    name: 'courses',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam magni sunt tempora et, eos id minima quasi suscipit doloremque cupiditate'
-  },{
-    id:6,
-    name: 'coaching',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam magni sunt tempora et, eos id minima quasi suscipit doloremque cupiditate'
-  },
-  {
-    id: 7,
-    name: 'trainings',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam magni sunt tempora et, eos id minima quasi suscipit doloremque cupiditate'
-  },
-  {
-    id: 8,
-    name: 'courses',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam magni sunt tempora et, eos id minima quasi suscipit doloremque cupiditate'
-  },{
-    id:9,
-    name: 'coaching',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam magni sunt tempora et, eos id minima quasi suscipit doloremque cupiditate'
+  const [posts, setPosts] = useState([]);
+
+  const fetchData = async () => {
+    const query = '*[_type == "post"]';
+    const post = await client.fetch(query);
+    setPosts(post);
+    console.log(post);
   }
-  ]
+
+  useEffect(() => {
+    fetchData();
+  }, [])
+
+  const filterItems = posts?.filter((item, index) => index < 3);
+
+
   return (
     <div className="blog-container">
       <h4 className="headline">
-        recent articles
+        latest articles
       </h4>
       <div className="article-container trigrid">
-      {
-            data.map(item => {
-              return (
-                <BlogCard key={item.id} item={item} />
+        	  {filterItems &&
+              filterItems?.map(
+                (post) => <BlogCard key={post._id} post={post} />
               )
-            })
-          }
+            }
+      </div>
+      <br /> 
+      <div className='center'>
+        <button className='button'>
+          see more
+        </button>
       </div>
     </div>
   )
