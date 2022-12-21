@@ -5,9 +5,9 @@ const Ghome = ({title}) => {
     <div className="main-home contact-home">
     <section>
       <div className="home-text">
-        <h1>
+        <h2>
           {title}
-        </h1>
+        </h2>
         <p>
         </p>
       </div>

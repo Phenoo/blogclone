@@ -25,6 +25,8 @@ const Hiip = () => {
     <div>
       <Ghome title="HIIP" />
       <section>
+      <br />
+        <br />
       <div className="center">
           <h4 className='headline'>
             featured articles

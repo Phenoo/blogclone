@@ -22,8 +22,10 @@ const Trainings = () => {
   })
   return (
     <div>
-      <Ghome title="training" />
+      <Ghome title="trainer" />
       <section>
+      <br />
+        <br />
       <div className="center">
           <h4 className='headline'>
             featured articles

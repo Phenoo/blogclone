@@ -27,6 +27,8 @@ const Podcast = () => {
       <Ghome title="Podcast" />
       <div className="container">
       <section>
+        <br />
+        <br />
       <div className="center">
           <h4 className='headline'>
             featured articles

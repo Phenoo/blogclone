@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {  NavLink } from 'react-router-dom'
+import {  Link, NavLink } from 'react-router-dom'
 import { FaBars, FaTimes } from 'react-icons/fa'
 
 import Logo from './Logo'
@@ -29,6 +29,13 @@ const Navigation = () => {
                   </NavLink>
                 </li>
                 <li  onClick={() => setNavbar(!navbar)}>
+                  <NavLink to='/blogs'
+                    className={({isActive}) => (isActive ? 'active' : '') }
+                  >
+                    blogs
+                  </NavLink>
+                </li>
+                <li  onClick={() => setNavbar(!navbar)}>
                   <NavLink to='/well'
                     className={({isActive}) => (isActive ? 'active' : '') }
                   >
@@ -53,20 +60,15 @@ const Navigation = () => {
                   <NavLink to='/training'
                     className={({isActive}) => (isActive ? 'active' : '') }
                   >
-                    training
-                  </NavLink>
-                </li>
-                <li  onClick={() => setNavbar(!navbar)}>
-                  <NavLink to='/contact'
-                    className={({isActive}) => (isActive ? 'active' : '') }
-                  >
-                    contact us
+                    trainer
                   </NavLink>
                 </li>
               </ul>
             </div>
             <button className='button none'>
-              get started
+              <Link to='/contact'>
+                talk to us
+              </Link>
             </button>
             <button className='mobile' onClick={() => setNavbar(!navbar)}>
               {

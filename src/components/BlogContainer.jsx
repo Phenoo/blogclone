@@ -21,9 +21,14 @@ const BlogContainer = () => {
 
   return (
     <div className="blog-container">
-      <h4 className="headline">
-        latest articles
-      </h4>
+        <div className="center">
+          <h4 className="headline">
+            our latest articles
+          </h4>
+          <p className='p-tag'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fuga voluptatem placeat magni voluptatibus enim eius molestias, veniam doloribus suscipit voluptas, provident tempora optio excepturi.
+          </p>
+        </div>
       <div className="article-container trigrid">
         	  {filterItems &&
               filterItems?.map(

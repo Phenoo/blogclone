@@ -26,9 +26,16 @@ const BlogCard = ({post}) => {
         </Link>
       </div>
       <div className="text">
-        <h6>
-          {formatDate}
+        <div className="flex">
+          <h6>
+            by
+            {post.author}
+          </h6>
+          <h6>
+          - {formatDate}
         </h6>
+        </div>
+        
         <h4>
           {post.title}
         </h4>
