@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 import Moment from 'moment'
-import moment from 'moment';
 import { urlFor } from '../lib/client';
 
 const BlogCard = ({post}) => {
@@ -17,7 +16,6 @@ const BlogCard = ({post}) => {
     })
   }
   const formatDate = Moment(post.date).format("MMM Do, YYYY.")
-  const minsAgo = moment(post.date).local().startOf('seconds').fromNow();
   return (
     <article className="blog-card">
       <div className="image">
@@ -38,10 +36,12 @@ const BlogCard = ({post}) => {
         <h4>
           {post.title}
         </h4>
-        <div className="category">
-          <h5>
-            {minsAgo}
-          </h5>
+        <div className="">
+          <p>
+            {
+              `${ post.body[0].children[0].text.substring(0, 150)}...`
+            }
+          </p>
         </div>
       </div>
     </article>
