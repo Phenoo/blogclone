@@ -5,14 +5,22 @@ import { Link } from 'react-router-dom';
 
 const BlogContainer = () => {
   const [posts, setPosts] = useState([]);
-
+  
+  const scrollTo = (id) => {
+    let element = document.getElementById(id);
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest'
+    })
+  }
+  
   const fetchData = async () => {
     const query = '*[_type == "post"]';
     const post = await client.fetch(query);
     setPosts(post);
     console.log(post);
   }
-
   useEffect(() => {
     fetchData();
   }, [])
@@ -39,7 +47,7 @@ const BlogContainer = () => {
       </div>
       <br /> 
       <div className='center'>
-        <button className='button'>
+        <button className='button' onClick={() => scrollTo('nav')}>
           <Link to='/blogs'>
           see more
           </Link>

@@ -1,5 +1,7 @@
 import React from 'react'
 import Logo from './Logo'
+import { Link } from 'react-router-dom';
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -19,37 +21,73 @@ const Footer = () => {
                   links
                 </h4>
                 <ul>
-                  <li>lorem ipsum</li>
-                  <li>lorem ipsum</li>
-                  <li>lorem ipsum</li>
-                  <li>lorem ipsum</li>
-                  <li>lorem ipsum</li>
-                  <li>lorem ipsum</li>
+                  <li>
+                    <Link to='/about'>
+                      about us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to='/blogs'>
+                      blogs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to='/well'>
+                      well
+                    </Link>
+                  </li>                  
+                  <li>
+                    <Link to='/podcast'>
+                      podcast
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to='/hiip'>
+                      hiip
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to='/trainer'>
+                      trainer
+                    </Link>
+                  </li>
                 </ul>
               </div>
               <div className="foot">
                 <h4 className="headline">
-                  Categories
+                  policy
                 </h4>
                 <ul>
-                  <li>lorem ipsum</li>
-                  <li>lorem ipsum</li>
-                  <li>lorem ipsum</li>
-                  <li>lorem ipsum</li>
-                  <li>lorem ipsum</li>
-                  <li>lorem ipsum</li>
+                  <li>Privacy Polcy</li>
+                  <li>Terms and conditions </li>
+                  <li>terms of use</li>
                 </ul>
               </div>
               <div className="foot">
                 <h4 className="headline">
-                  set up
+                  contact us
                 </h4>
-                <ul>
-                  <li>lorem ipsum</li>
-                  <li>lorem ipsum</li>
-                  <li>lorem ipsum</li>
-                  <li>lorem ipsum</li>
-                  <li>lorem ipsum</li>
+                <ul className='social'>
+                  <li>
+                    <a href="#a">
+                      <FaFacebook />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#a">
+                      <FaTwitter />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#a">
+                      <FaLinkedin />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#a">
+                      <FaInstagram />
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>

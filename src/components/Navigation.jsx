@@ -7,6 +7,7 @@ import Logo from './Logo'
 const Navigation = () => {
   const [navbar, setNavbar] = useState(false)
 
+
   return (
     <nav id="nav">
         <section>
@@ -62,6 +63,11 @@ const Navigation = () => {
                   >
                     trainer
                   </NavLink>
+                </li>
+                <li>
+                  <button className='mobile button'>
+                    talk to us
+                  </button>
                 </li>
               </ul>
             </div>

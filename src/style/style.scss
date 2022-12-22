@@ -376,12 +376,48 @@ footer {
     color: #fff;
     background: #010000;
     padding: 2rem 0 0;
+    .headline {
+        font-weight: 500;
+        color: #c45163;
+    }
+    ul {
+        margin-top: 8px;
+    }
+    li {
+        cursor: pointer;
+        &:hover {
+            color: $wine;
+        }
+    }
+    .social {
+        flex-direction: row;
+        li {
+            border-radius: 3px;
+            padding: 10px;
+            background: #fff;
+            color: $wine;
+            transition: all 0.3s ease;
+            border: 1px solid $wine;
+            a {
+                display: flex;
+                align-items: center;
+            }
+            svg {
+                font-size: 1.3rem;
+            }
+            &:hover {
+                transform: scale(0.8);
+                transition: all 0.3s ease;
+            }
+        }
+    }
 }
 
 .copy {
     text-align: center;
     padding: 1rem;
     text-transform: capitalize;
+    margin-top: 4rem;
 }
 
 ///scrollup
@@ -396,7 +432,7 @@ footer {
     bottom: 1.5rem;
     background-color: #111;
     color: $wine;
-    border: 1px solid #111;
+    border: 1px solid $wine;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -531,19 +567,14 @@ footer {
             ul {
                 display: flex;
                 flex-direction: column;
-                padding: 6rem 3rem 1rem;
-                gap: 2rem;
+                padding: 6rem 2rem 1rem;
+                gap: 1.5rem;
                 a {
                     margin-bottom: 1rem;
                     font-size: 1.35rem;
                     color: #111;
                 }
             }
-        }
-        .button {
-            text-align: center;
-            margin: 1rem auto;
-            width: 105px;
         }
     }
     .none {
@@ -568,6 +599,19 @@ footer {
 }
 
 @media screen and (max-width: 550px) {
+    .main-home {
+        height: 80vh;
+    }
+    .home-text {
+        h2 {
+            font-size: 1.85rem;
+        }
+    }
+    nav {
+        header {
+            padding: 0.5rem 0;
+        }
+    }
     .trigrid {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -579,8 +623,9 @@ footer {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 410px) {
     .fourgrid {
         grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
     }
 }
