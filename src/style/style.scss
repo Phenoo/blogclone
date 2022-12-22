@@ -145,6 +145,9 @@ nav {
 .button {
     background: $wine;
     color: #fff;
+    a {
+        font-size: 0.9rem;
+    }
 }
 
 .flex {
@@ -256,8 +259,8 @@ nav {
 
 .blog-card {
     width: 340px;
-    height: 390px;
-    border-radius: 5px;
+    height: 340px;
+    border-radius: 2px;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 7px 10px 0 rgba(0, 0, 0, 0.20);
     transition: all 0.3s ease;
     cursor: pointer;

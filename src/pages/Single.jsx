@@ -1,8 +1,8 @@
-import moment from 'moment';
 import React, { useEffect, useState } from 'react'
 import {  useParams} from 'react-router-dom'
 import {client, urlFor} from '../lib/client'
 import BlockContent from '@sanity/block-content-to-react'
+import Moment from 'moment'
 
 import Comment from '../components/Comment'
 
@@ -29,7 +29,8 @@ const Single = () => {
         <article>
           {
             single && single.map(item => {
-              const minsAgo = moment(item.date).local().startOf('seconds').fromNow();
+              const formatDate = Moment(item.date).format("MMM Do, YYYY.")
+
               return (
                 <article className="single-container" key={item.slug}>
                   <div className="center">
@@ -39,7 +40,7 @@ const Single = () => {
                   </div>
                   <div className="center">
                     <div className="image">
-                      {item.mainImage && item.mainImage.asset &&
+                      {item.mainImage && 
                         <img src={urlFor(item.mainImage )} alt={item.title} />
                       }
                     </div>
@@ -49,7 +50,7 @@ const Single = () => {
                       by  Ukusare Faith 
                     </h6>
                     <h6 className='grey'>
-                      {minsAgo}
+                      {formatDate}
                     </h6>
                   </div>
                   <br />

@@ -1,6 +1,7 @@
 import React, {useEffect, useState,} from 'react'
 import BlogCard from './BlogCard'
 import {client} from '../lib/client'
+import { Link } from 'react-router-dom';
 
 const BlogContainer = () => {
   const [posts, setPosts] = useState([]);
@@ -39,7 +40,9 @@ const BlogContainer = () => {
       <br /> 
       <div className='center'>
         <button className='button'>
+          <Link to='/blogs'>
           see more
+          </Link>
         </button>
       </div>
     </div>

@@ -1,9 +1,9 @@
 import React from 'react'
-import Img1 from '../assets/item1.jpeg'
 import { Link } from 'react-router-dom';
 
 import Moment from 'moment'
 import moment from 'moment';
+import { urlFor } from '../lib/client';
 
 const BlogCard = ({post}) => {
   
@@ -22,14 +22,13 @@ const BlogCard = ({post}) => {
     <article className="blog-card">
       <div className="image">
         <Link to={`/blog/${post.slug.current}`} onClick={() => scrollTo()}>
-          <img src={Img1} alt="blog-card" />
+          <img src={urlFor(post.mainImage)} alt="blog-card" />
         </Link>
       </div>
       <div className="text">
         <div className="flex">
           <h6>
-            by
-            {post.author}
+          by  Ukusare Faith 
           </h6>
           <h6>
           - {formatDate}
