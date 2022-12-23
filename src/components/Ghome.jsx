@@ -8,8 +8,6 @@ const Ghome = ({title}) => {
         <h2>
           {title}
         </h2>
-        <p>
-        </p>
       </div>
     </section>
   </div>

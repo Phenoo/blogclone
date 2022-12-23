@@ -50,7 +50,7 @@ const BlogContainer = () => {
       <div className='center'>
         <button className='button' onClick={() => scrollTo('nav')}>
           <Link to='/blogs'>
-          see more
+            let's take a tour
           </Link>
         </button>
       </div>

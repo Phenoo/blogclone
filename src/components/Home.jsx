@@ -9,7 +9,7 @@ const Home = () => {
             6PAC MIND
           </h2>
           <h4>
-            building renewed minds
+            Building renewed minds
           </h4>
           <br />
         </div>

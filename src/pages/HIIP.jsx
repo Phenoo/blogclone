@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 import Ghome from '../components/Ghome'
 import BlogCard from '../components/BlogCard'
 import { client } from '../lib/client'
+import BlogContainer from '../components/BlogContainer'
+
 
 
 const Hiip = () => {
@@ -39,6 +41,7 @@ const Hiip = () => {
               )
             }
             </div>
+          <BlogContainer />
       </section>
     </div>
   )
