@@ -57,7 +57,7 @@ const Single = () => {
                   <article>
                     <BlockContent 
                       blocks={item.body}
-                      projectId="wjj0ccq4"
+                      projectId="8csevbsr"
                       dataset="production"
                     />
                   </article>

@@ -15,7 +15,7 @@ const Podcast = () => {
     const query = '*[_type == "post"]';
     const post = await client.fetch(query);
     setPosts(post);
-    setFilterPosts(posts.filter((work) => work.category.includes('podcast')));
+    setFilterPosts(posts.filter((work) => work.tag.includes('podcast')));
   }
 
   

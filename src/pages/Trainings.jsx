@@ -13,7 +13,7 @@ const Trainings = () => {
     const query = '*[_type == "post"]';
     const post = await client.fetch(query);
     setPosts(post);
-    setFilterPosts(posts.filter((work) => work.category.includes('training')));
+    setFilterPosts(posts.filter((work) => work.tag.includes('trainer')));
   }
 
   

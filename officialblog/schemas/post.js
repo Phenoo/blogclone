@@ -33,15 +33,15 @@ export default defineType({
                 hotspot: true,
             },
         }),
-        // defineField({
-        //     name: 'categories',
-        //     title: 'Categories',
-        //     type: 'array',
-        //     of: [{ type: 'reference', to: { type: 'category' } }],
-        // }),
         defineField({
-            name: 'postcategory',
-            title: 'Post Category',
+            name: 'categories',
+            title: 'Categories',
+            type: 'array',
+            of: [{ type: 'reference', to: { type: 'category' } }],
+        }),
+        defineField({
+            name: 'tag',
+            title: 'Tag',
             type: 'string',
         }),
         defineField({

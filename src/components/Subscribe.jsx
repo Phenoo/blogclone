@@ -13,7 +13,8 @@ const Subscribe = () => {
             </h4>
             <br />
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis odio quisquam corrupti nam molestias expedita magnam error rem in sapiente.
+            The 6pacmind helps you to build a renewed mind, keep tabs with our latest updates 
+            by subscribing to our newsletters and post notifications.
             </p>
             <br />
             <div className="form-input flex">

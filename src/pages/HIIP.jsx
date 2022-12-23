@@ -12,7 +12,7 @@ const Hiip = () => {
     const query = '*[_type == "post"]';
     const post = await client.fetch(query);
     setPosts(post);
-    setFilterPosts(posts.filter((work) => work.category.includes('hiip')));
+    setFilterPosts(posts.filter((work) => work.tag.includes('hiip')));
   }
 
   

@@ -35,7 +35,8 @@ const BlogContainer = () => {
             our latest articles
           </h4>
           <p className='p-tag'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis fuga voluptatem placeat magni voluptatibus enim eius molestias, veniam doloribus suscipit voluptas, provident tempora optio excepturi.
+            The 6pacmind helps you to build a renewed mind, keep tabs with our latest updates 
+            by subscribing to our newsletters and post notifications.
           </p>
         </div>
       <div className="article-container trigrid">
